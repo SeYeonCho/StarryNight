@@ -4,7 +4,7 @@ SSAFY 2학기 특화 프로젝트 - 별나린밤
 
 ## Quick Links 
 
-------
+<!-- ------ -->
 
 
 
@@ -19,10 +19,16 @@ SSAFY 2학기 특화 프로젝트 - 별나린밤
 - [Architecture](#architecture)
 
 
+<!-- ----- -->
+
+# 시연영상
+\>\>\> [Click here!!](https://drive.google.com/file/d/10fGj2RbCLhnS47UzKYTzb0A5VhDikS1b/view?usp=sharing) <<<
+
+<!-- ----- -->
 
 # 프로젝트 설명
 
-------
+<!-- ------ -->
 
 
 - Youtube, Naver, Twitter 등의 SNS와 플랫폼들의 Open API를 통해 정보를 수집하고, 그것을 바탕으로 키워드에 대한 분석과 평가를 제공해주는 프로젝트

@@ -6,21 +6,21 @@
 
 ### Jenkins 의존성 설정 
 
-| 종류  | 버전  |   |   |   |
-|---|---|---|---|---|
-| Gradle  | 7.1.1  |   |   |   |
-| NodeJS  | 16.10.0  |   |   |   |
-| Docker  | 20.10.8  |   |   |   |
+| 종류  | 버전  | 
+|---|---|
+| Gradle  | 7.1.1  | 
+| NodeJS  | 16.10.0  | 
+| Docker  | 20.10.8  | 
 
 ### BackEnd 의존성 설정 
 
-| 종류  | 버전  |   |   |   |
-|---|---|---|---|---|
-| Spring Boot Framework  | 2.5.5  |   |   |   |
-| Java openjdk | 11 |   |   |   |
-| Gradle | 7.2 |   |   |   |
-| confluent(Kafka, Kafka Streams, Kafka Connect, Hadoop 3.3.1) | 1.40.1 (java 8) |   |   |   |
-| python | 3.8.10 |   |   |   |
+| 종류  | 버전  |
+|---|---|
+| Spring Boot Framework  | 2.5.5  |
+| Java openjdk | 11 |
+| Gradle | 7.2 |
+| confluent(Kafka, Kafka Streams, Kafka Connect, Hadoop 3.3.1) | 1.40.1 (java 8) |
+| python | 3.8.10 |
 
 ### 배포 시 특이사항 
 

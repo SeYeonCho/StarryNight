@@ -1,0 +1,52 @@
+ifndef::snippets[]
+:snippets: ../../../build/generated-snippets
+endif::[]
+= API Document
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 3
+:sectlinks:
+:docinfo: shared-head
+
+[[introduction]]
+== 소개
+
+별나린밤 API
+
+[[common]]
+== 공통 사항
+
+API에 관계없이 아래 사항을 지켜주셔야 합니다.
+
+=== Domain
+
+|===
+| 환경 | Domain
+
+| 개발서버
+| `https://j5b103.p.ssafy.io:8080`
+
+| 운영서버
+| `https://j5b103.p.ssafy.io:6060`
+|===
+
+=== Common Response
+
+include::{snippets}/common/commonResponse/custom-response-fields.adoc[]
+
+include::{snippets}/common/apiResponseCode/custom-response-fields.adoc[]
+
+&#160;
+
+=== 단어 검색
+
+include::{snippets}/WordApi/getAnalysisWord/success/request-parameters.adoc[]
+include::{snippets}/WordApi/getAnalysisWord/success/response-body.adoc[]
+include::{snippets}/WordApi/getAnalysisWord/success/response-fields.adoc[]
+
+=== 트렌드 단어 조회
+
+include::{snippets}/WordApi/getTrend/success/response-body.adoc[]
+include::{snippets}/WordApi/getTrend/success/response-fields.adoc[]

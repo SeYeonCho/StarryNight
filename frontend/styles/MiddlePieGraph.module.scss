@@ -1,0 +1,22 @@
+.middlePieGraphDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.pie1, .pie2, .pie3 {
+    width: 50%;
+    height: 50%;
+}
+
+.pie3 {
+    margin : 0 auto;
+}
+
+.xAxisText{
+    font-family: pretendard400;
+    font-size: 0.72vw;
+}

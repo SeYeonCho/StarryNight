@@ -1,0 +1,96 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.5'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'org.asciidoctor.jvm.convert' version '3.3.2'
+    id 'java'
+}
+
+group = 'com.ssafy'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+    compile.exclude module: 'spring-boot-starter-logging'
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+    asciidoctorExtensions
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    set('snippetsDir', file("build/generated-snippets"))
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.kafka:spring-kafka'
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.kafka:spring-kafka-test'
+    testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+    asciidoctorExtensions 'org.springframework.restdocs:spring-restdocs-asciidoctor'
+    implementation group: 'com.mashape.unirest', name: 'unirest-java', version: '1.4.7'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.13'
+    implementation 'org.glassfish.jaxb:jaxb-core:3.0.2'
+    implementation 'org.glassfish.jaxb:jaxb-runtime'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.3'
+    implementation group: 'org.bouncycastle', name: 'bcprov-jdk16', version: '1.45'
+    implementation 'com.google.code.gson:gson:2.8.8'
+    implementation 'org.springframework.boot:spring-boot-gradle-plugin:2.5.0'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation("org.springframework.boot:spring-boot-starter-web")
+}
+
+test {
+    useJUnitPlatform()
+    outputs.dir snippetsDir
+}
+
+asciidoctor {
+    inputs.dir snippetsDir
+    attributes 'snippets': snippetsDir
+    dependsOn test
+}
+
+bootJar {
+    layered {
+        application {
+            intoLayer("spring-boot-loader") {
+                include "org/springframework/boot/loader/**"
+            }
+            intoLayer("application")
+        }
+        dependencies {
+            intoLayer("application") {
+                includeProjectDependencies()
+            }
+            intoLayer("snapshot-dependencies") {
+                include "*:*:*SNAPSHOT"
+            }
+            intoLayer("dependencies")
+        }
+        layerOrder = ["dependencies", "spring-boot-loader", "snapshot-dependencies", "application"]
+    }
+    dependsOn asciidoctor
+    copy {
+        from "${asciidoctor.outputDir}"            // /html5를 사용하지 않는다!
+        into 'src/main/resources/static/api/docs'    // /static/docs로 복사!
+    }
+}
+
+bootBuildImage {
+    imageName = "starry-api"
+}
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

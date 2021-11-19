@@ -1,0 +1,151 @@
+#searchBox {
+    position: relative;
+    width: 24vw;
+    height: 4.2vh;
+    top: 43.3vh;
+    left: 22vw;
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px 0px #3F40461A;
+}
+
+#searchInput {
+    font-size: 0.67vw;
+    padding: 1.3vh;
+    width: 24vw;
+    height: 4vh;
+    padding-left: 2vw;
+    border-radius: 15px;
+    border: none;
+}
+
+#inputInsideIcon {
+    position: absolute;
+    left: 0.5vw;
+    top: 1.3vh;
+    width: 0.83vw;
+    height: 1.48vh;
+}
+
+#keyWordList {
+    width: 24vw;
+    height: 37vh;
+    position: relative;
+    top: 48vh;
+    left: 22vw;
+    font-family: pretendard;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 20px;
+    // background-color: aquamarine;
+    box-shadow: 4px 4px 15px 0px #3F40461A;
+}
+
+.rankOutBox{
+    position: relative;
+    left:30.4vw;
+    top: 53.3vh;
+}
+
+.dataKeyword{
+    padding : 10px 6px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.dataKeyWordTitle {
+    font-family: pretendard500;
+    color: #2C2E43;
+}
+
+.dataKeyWordTitle:hover {
+    // background-color: #2C2E43; 
+    color: #FFD523;  
+    cursor: pointer;
+}
+
+.dataKeyWordLink {
+    font-family: pretendard500;
+    font-size: 0.66vw;
+    line-height: 1.48vh;
+    letter-spacing: -0.03em;
+    color: #a9a8b0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.dataKeyWordLink:hover {
+    font-family: pretendard500;
+    font-size: 0.66vw;
+    line-height: 1.48vh;
+    letter-spacing: -0.03em;
+    color: #2C2E43;
+    cursor: pointer;
+    z-index: 2;
+    transform: translateX(0.20vw);
+    transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
+}
+
+
+
+#keyWordTitle {
+    width: 100%;
+    font-family: pretendard600;
+    font-size: 0.93vw;
+    line-height: 2.03vh;
+    letter-spacing: -0.03em;
+    padding: 2vh 0 4vh 1.5vw;
+    display: flex;
+}
+
+.questionIcon1 {
+    margin-left: 0.36vw;
+    color: #2C2E43;
+    font-size: 0.9vw;
+}
+
+#keyWordTitle > div > div:last-child {
+    left:10.3vw !important;
+    top: 0.7vh !important;
+    font-family: pretendard300;
+    font-size: 0.72vw;
+    line-height: 0.88vw; 
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.03em;
+    width: 15vw;
+    height: 5vh;
+    margin-left: 0.67vw;
+}
+
+.hoverBox{
+    top:0px;
+    left:0px;
+}
+
+#keyWordTopList {
+    font-size: 0.93vw;
+    width: 100%;
+    height: 23vh;
+    overflow-y: scroll;
+    margin: 0vh 1.4vw 5vh 1.4vw;
+}
+
+#keyWordTopList::-webkit-scrollbar {
+  display: none
+}
+.rankBox {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.rankIcon {
+    font-size: 25px;
+    margin-right: 10px;
+}
+.rankTitle{
+    text-align: center;
+    font-family: esamanru;
+    font-size: 25px;
+    margin-bottom: 10px;
+}

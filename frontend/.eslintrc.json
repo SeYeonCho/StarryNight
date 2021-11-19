@@ -1,0 +1,34 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "next/core-web-vitals",
+        "plugin:react/recommended",
+        //"plugin:prettier/recommended",
+        "eslint-config-prettier",
+        "google"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "require-jsdoc": 0,
+        "linebreak-style": ["error", "windows", "unix"]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@mixin font-face($name, $file, $weight: 400, $style: normal) { 
+    @font-face {
+        font-family: "#{$name}";
+        src: url($file);
+        font-weight: $weight; font-style: $style; 
+    }
+}
+    
+@include font-face(esamanru, '../fonts/esamanru_medium.ttf', '', '');
+@include font-face(esamanru300, '../fonts/esamanru_medium.ttf', 300, '');
+@include font-face(esamanru400, '../fonts/esamanru_medium.ttf', 400, '');
+@include font-face(esamanru500, '../fonts/esamanru_medium.ttf', 500, '');
+@include font-face(esamanru600, '../fonts/esamanru_medium.ttf', 600, '');
+@include font-face(esamanru700, '../fonts/esamanru_medium.ttf', 700, '');
+@include font-face(pretendard, '../fonts/PretendardVariable.woff2', '', '');
+@include font-face(pretendard300, '../fonts/PretendardVariable.woff2', 300, '');
+@include font-face(pretendard400, '../fonts/PretendardVariable.woff2', 400, '');
+@include font-face(pretendard500, '../fonts/PretendardVariable.woff2', 500, '');
+@include font-face(pretendard600, '../fonts/PretendardVariable.woff2', 600, '');
+@include font-face(pretendard700, '../fonts/PretendardVariable.woff2', 700, '');
+

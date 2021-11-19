@@ -47,14 +47,33 @@ SSAFY 2학기 특화 프로젝트 - 별나린밤
 
 ![image](/README.asset/image.png)
 
+---
+#### JAVA / SpringBoot / Redis / Gradle / Kafka / hadoop 
 
+* Kafka를 통해 데이터 파이프라인 구축
+* Hadoop을 통해 방대한 데이터를 백업
 
-# WIKI
+#### React.js / Next.js / Redux / Scss / SWR/ Typescript
+
+* Next를 통해 SSR을 도입하여 서버에서 사용자에게 보여줄 페이지를 모두 구성
+* Typescript를 통해 type의 장점을 사용하여 구현
+* SWR를 통해 API 데이터를 효츌적으로 처리
+
+#### Jenkins
+
+* release branch에 대한 Push Event시 자동 Test / Build 진행(CI)
+* release branch push시 원격 서버의 배포 스크립트 실행(CD)
+
+#### NGiNX
+
+* 특이사항 없음
+
+<!-- # WIKI
 
 ------
 
 프로젝트의 모든 정보는 [WIKI](https://lab.ssafy.com/s05-bigdata-dist/S05P21B103/-/wikis/Home)를 통해 참고하실 수 있습니다.
-
+ -->
 
 
 # Architecture

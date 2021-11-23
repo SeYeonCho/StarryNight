@@ -52,6 +52,7 @@ SSAFY 2학기 특화 프로젝트 - 별나린밤
 ---
 
 ![image](/README.asset/image.png)
+특이사항: Apache Kafka가 아닌 Confluence Kafka를 사용하였음.
 
 ---
 #### JAVA / SpringBoot / Redis / Gradle / Kafka / hadoop 
